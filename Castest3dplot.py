@@ -1,7 +1,8 @@
-# 3D variant taking a 3D array of points and plotting the values
+# Generate a set of Bezier curves in 3D space
 
 import numpy as np
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import axes3d
 
 def castelsim3d(Pthr, Cpthr):
     #fig = plt.figure()
