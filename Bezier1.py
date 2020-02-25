@@ -1,3 +1,5 @@
+# Practice file for an initial Quadratic Bezier Curve (Three control points)
+
 import numpy as np
 import matplotlib.pyplot as plt
 
