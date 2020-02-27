@@ -20,7 +20,7 @@ def castelsim3d(Pthr, Cpthr, Bounds=False):
     zi, za = Pthr[:,2].min(), Pthr[:,2].max()
     centre = np.array([xi+xa, yi+ya, zi+za])/2
     line = max((xa - xi),(ya - yi),(za - zi))/2
-    # A nice looking line of points!
+    # An array of points for the corners of my plots
     endpoints = np.array([
             [centre[0] - line, centre[1] - line, centre[2] - line], 
             [centre[0] - line, centre[1] - line, centre[2] + line], 
@@ -30,8 +30,8 @@ def castelsim3d(Pthr, Cpthr, Bounds=False):
             [centre[0] + line, centre[1] - line, centre[2] + line], 
             [centre[0] + line, centre[1] + line, centre[2] - line], 
             [centre[0] + line, centre[1] + line, centre[2] + line]])
-    # In hindsight I shouldn't needed to have done the above or below:
-    if Bounds is True:# But I added it anyway in case one wants it
+    # If true, you see the points on the plot
+    if Bounds is True:
         ax.scatter(endpoints[:,0],endpoints[:,1],endpoints[:,2],'b')
     
     ax.set_xlim((centre[0] - line), (centre[0] + line))
