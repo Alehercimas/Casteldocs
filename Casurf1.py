@@ -3,6 +3,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import cm
 from mpl_toolkits.mplot3d import axes3d
 
 def surfcast(Psur, mpar, npar):# arbitrary parameters m and n
@@ -49,6 +50,6 @@ def surfbez(Psur): # Remember to use the
     ax.set_xlim((centre[0] - line), (centre[0] + line))
     ax.set_ylim((centre[1] - line), (centre[1] + line))
     ax.set_zlim((centre[2] - line), (centre[2] + line))
-    ax.plot_surface(X, Y, Z)
+    ax.plot_surface(X, Y, Z, cmap=cm.viridis)
     plt.show()
-    return 
+    return
