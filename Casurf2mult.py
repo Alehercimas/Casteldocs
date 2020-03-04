@@ -3,6 +3,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import cm
 from mpl_toolkits.mplot3d import axes3d
 
 def rotx(th):
@@ -72,7 +73,7 @@ def surfmultx(Psur, trn, turns=1):
         X = allcoors[:,0].reshape(11,11)
         Y = allcoors[:,1].reshape(11,11)
         Z = allcoors[:,2].reshape(11,11)# 11 times 11 parameters in each case
-        ax.plot_surface(X, Y, Z)
+        ax.plot_surface(X, Y, Z, cmap=cm.viridis)
         limptemps = np.array([X.min(), X.max(), Y.min(), 
                               Y.max(), Z.min(), Z.max()])
         graphlims = np.append(graphlims, limptemps).reshape(-1,6)
@@ -85,8 +86,8 @@ def surfmultx(Psur, trn, turns=1):
     ax.set_xlim((centre[0] - line), (centre[0] + line))
     ax.set_ylim((centre[1] - line), (centre[1] + line))
     ax.set_zlim((centre[2] - line), (centre[2] + line))
-    
     plt.show()
+    return
 
 def surfmulty(Psur, trn, turns=1):
     fig = plt.figure(figsize=(8,8))
@@ -108,7 +109,7 @@ def surfmulty(Psur, trn, turns=1):
         X = allcoors[:,0].reshape(11,11)
         Y = allcoors[:,1].reshape(11,11)
         Z = allcoors[:,2].reshape(11,11)# 11 times 11 parameters in each case
-        ax.plot_surface(X, Y, Z)
+        ax.plot_surface(X, Y, Z, cmap=cm.viridis)
         limptemps = np.array([X.min(), X.max(), Y.min(), 
                               Y.max(), Z.min(), Z.max()])
         graphlims = np.append(graphlims, limptemps).reshape(-1,6)
@@ -121,8 +122,8 @@ def surfmulty(Psur, trn, turns=1):
     ax.set_xlim((centre[0] - line), (centre[0] + line))
     ax.set_ylim((centre[1] - line), (centre[1] + line))
     ax.set_zlim((centre[2] - line), (centre[2] + line))
-    
     plt.show()
+    return
     
 def surfmultz(Psur, trn, turns=1):
     fig = plt.figure(figsize=(8,8))
@@ -144,7 +145,7 @@ def surfmultz(Psur, trn, turns=1):
         X = allcoors[:,0].reshape(11,11)
         Y = allcoors[:,1].reshape(11,11)
         Z = allcoors[:,2].reshape(11,11)# 11 times 11 parameters in each case
-        ax.plot_surface(X, Y, Z)
+        ax.plot_surface(X, Y, Z, cmap=cm.viridis)
         limptemps = np.array([X.min(), X.max(), Y.min(), 
                               Y.max(), Z.min(), Z.max()])
         graphlims = np.append(graphlims, limptemps).reshape(-1,6)
@@ -157,5 +158,5 @@ def surfmultz(Psur, trn, turns=1):
     ax.set_xlim((centre[0] - line), (centre[0] + line))
     ax.set_ylim((centre[1] - line), (centre[1] + line))
     ax.set_zlim((centre[2] - line), (centre[2] + line))
-    
     plt.show()
+    return
