@@ -17,3 +17,4 @@ def cast3dmuly(Pthr, Cpthr, tht):
         j = castestrot3y(i.reshape(-1,3), tht) # Works out a Curve for each row
         ax.plot(j[:,0],j[:,1],j[:,2],'b') # The X, Y and Z axes that will be used
     plt.show()
+    return
