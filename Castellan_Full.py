@@ -1,4 +1,5 @@
-# The full casteljau transformation function with all the calculations in one place
+# All functions for the rotations of Bezier curves in 3D space in one place
+# With an optional function depicting all three
 
 import numpy as np
 import matplotlib.pyplot as plt
