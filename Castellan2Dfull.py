@@ -1,4 +1,4 @@
-# Full version of the bezier curves and their rotations in 2D
+# Full version of the bezier curves in 2D
 
 import numpy as np
 import matplotlib.pyplot as plt
