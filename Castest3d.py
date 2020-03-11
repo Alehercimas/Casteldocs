@@ -2,7 +2,7 @@
 
 import numpy as np
 
-def castest3d(s): # Remember to use the 
+def castest3d(s):
     pp = np.hstack((s[:-1], s[1:]))
     a, b = np.shape(s)
     c = np.arange(a - 2)
