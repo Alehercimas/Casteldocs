@@ -2,7 +2,7 @@
 
 import numpy as np
 
-def castestrot3y(s, tht): # Remember to use the 
+def castestrot3y(s, tht):
     pp = np.hstack((s[:-1], s[1:]))
     a, b = np.shape(s)
     c = np.arange(a - 2)
