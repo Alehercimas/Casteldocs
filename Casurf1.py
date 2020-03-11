@@ -27,7 +27,7 @@ def surfcast(Psur, mpar, npar):# arbitrary parameters m and n
     Psur2 = Psur2[0]
     return Psur2
        
-def surfbez(Psur): # Remember to use the
+def surfbez(Psur):
     fig = plt.figure(figsize=(8,8))
     ax = fig.gca(projection='3d')
     count = np.arange(11) # for easier "python" like counting
