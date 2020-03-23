@@ -1,6 +1,7 @@
-# A function for taking 
+# A function for taking multiple sets of Bezier curves, translating and rotating them
+# each input is a tuple
 
-def GrandBezi3r(Po, Cpo, Axis, Theta, Rotxis, Rotn, xcor, ycor, zcor, time=0):
+def GrandCurveRot3D(Po, Cpo, Axis, Theta, Rotxis, Rotn, xcor, ycor, zcor, time=0):
     # plt.style.use('dark_background') # Optional Dark background
     fig = plt.figure(figsize=(12, 12))
     ax = fig.gca(projection='3d')
