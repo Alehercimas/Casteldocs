@@ -1,7 +1,7 @@
 # A function for taking a set of Bezier curves (Po and Cpo) "pushing" them to the third dimension
 # and translating them by (xcor, ycor, zcor)
 
-def Bezi3rd(Po, Cpo, Axis, xcor=0, ycor=0, zcor=0):
+def Grand3rd(Po, Cpo, Axis, xcor=0, ycor=0, zcor=0):
     fig = plt.figure(figsize=(8,8))
     ax = fig.gca(projection='3d')
     if Axis == 'x':
